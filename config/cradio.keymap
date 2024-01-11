@@ -30,11 +30,6 @@
     combos {
         compatible = "zmk,combos";
 
-        esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <0 1 0 1 0 1 0 1>;
-        };
-
         tab {
             bindings = <&kp TAB>;
             key-positions = <10 11>;
@@ -43,6 +38,11 @@
         backspace {
             bindings = <&kp BACKSPACE>;
             key-positions = <16 17>;
+        };
+
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 1>;
         };
     };
 
