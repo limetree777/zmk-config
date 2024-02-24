@@ -46,6 +46,15 @@
         };
     };
 
+    macros {
+        sel_word: sel_word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(RIGHT_ARROW) &kp LC(LEFT_ARROW) &kp LC(LS(RIGHT_ARROW))>;
+            label = "SEL_WORD";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -60,10 +69,10 @@
 
         left_layer {
             bindings = <
-&kp INSERT  &kp HOME   &kp UP_ARROW  &kp END    &kp PAGE_UP      &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans
-&kp DELETE  &kp LEFT   &kp DOWN      &kp RIGHT  &kp PAGE_DOWN    &trans        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans
-&kp LC(Z)   &kp LC(X)  &kp LC(C)     &kp LC(V)  &trans           &trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans
-                                     &trans     &trans           &kp NUMBER_0  &trans
+&kp INSERT  &kp HOME   &kp UP_ARROW  &kp END    &kp PAGE_UP      &kp LEFT_SHIFT    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans
+&kp DELETE  &kp LEFT   &kp DOWN      &kp RIGHT  &kp PAGE_DOWN    &kp LEFT_CONTROL  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans
+&kp LC(Z)   &kp LC(X)  &kp LC(C)     &kp LC(V)  &sel_word        &trans            &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans
+                                     &trans     &trans           &kp NUMBER_0      &trans
             >;
         };
 
