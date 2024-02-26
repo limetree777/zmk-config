@@ -15,5 +15,6 @@ manifest:
       remote: petejohanson
       revision: feat/pointers-move-scroll
       import: app/west.yml
-   self:
+
+  self:
     path: config
