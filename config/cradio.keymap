@@ -93,5 +93,14 @@
                           &trans   &trans    &bt BT_CLR  &trans
             >;
         };
+        
+        MOUSE_LAYER {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &kp UP     &mkp LCLK  &kp UP    &mkp RCLK  &trans
+&trans  &trans  &trans  &trans  &trans    &mkp MCLK  &kp LEFT   &kp DOWN  &kp RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans    &kp DOWN   &mkp MB4   &trans    &mkp MB5   &trans
+                        &trans  &trans    &trans     &trans
+            >;
+        };
     };
 };
