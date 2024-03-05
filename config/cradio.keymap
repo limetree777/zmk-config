@@ -13,9 +13,9 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            require-prior-idle-ms = <0>;
+            tapping-term-ms = <199>;
+            quick-tap-ms = <100>;
+            require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
     };
@@ -103,9 +103,9 @@
 
         mouse_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &msc SCRL_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans
-&trans  &trans  &trans  &trans  &trans    &mkp MCLK       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
-&trans  &trans  &trans  &trans  &trans    &msc SCRL_DOWN  &mkp MB4        &trans          &mkp MB5         &trans
+&trans  &trans  &trans  &trans  &trans    &msc SCRL_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &mkp MB4
+&trans  &trans  &trans  &trans  &trans    &mkp MCLK       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp MB5
+&trans  &trans  &trans  &trans  &trans    &msc SCRL_DOWN  &trans          &trans          &trans           &trans
                         &trans  &trans    &trans          &trans
             >;
         };
