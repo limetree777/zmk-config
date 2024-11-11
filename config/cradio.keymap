@@ -68,15 +68,6 @@
         };
     };
 
-    macros {
-        sel_word: sel_word {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(RIGHT_ARROW) &kp LC(LEFT_ARROW) &kp LC(LS(RIGHT_ARROW))>;
-            label = "SEL_WORD";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -92,8 +83,8 @@
         left_layer {
             bindings = <
 &kp INSERT  &kp HOME   &kp UP_ARROW  &kp END    &kp PAGE_UP      &kp LEFT_SHIFT    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PRINTSCREEN
-&kp DELETE  &kp LEFT   &kp DOWN      &kp RIGHT  &kp PAGE_DOWN    &kp LEFT_CONTROL  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans
-&kp LC(Z)   &kp LC(X)  &kp LC(C)     &kp LC(V)  &sel_word        &trans            &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans
+&kp DELETE  &kp LEFT   &kp DOWN      &kp RIGHT  &kp PAGE_DOWN    &kp LEFT_CONTROL  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SCROLLLOCK
+&kp LC(Z)   &kp LC(X)  &kp LC(C)     &kp LC(V)  &trans           &trans            &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PAUSE_BREAK
                                      &trans     &trans           &kp NUMBER_0      &trans
             >;
         };
@@ -109,10 +100,10 @@
 
         tri_layer {
             bindings = <
-&kp F1  &kp F2   &kp F3   &kp F4   &trans    &trans      &trans        &trans        &trans        &sys_reset
-&kp F5  &kp F6   &kp F7   &kp F8   &trans    &trans      &bt BT_SEL 3  &bt BT_SEL 4  &trans        &bootloader
-&kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans
-                          &trans   &trans    &bt BT_CLR  &trans
+&sys_reset   &trans        &trans        &trans        &trans            &trans  &kp F7  &kp F8  &kp F9  &kp F10
+&bootloader  &bt BT_SEL 3  &bt BT_SEL 4  &trans        &trans            &trans  &kp F4  &kp F5  &kp F6  &kp F11
+&trans       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans            &trans  &kp F1  &kp F2  &kp F3  &kp F12
+                                         &trans        &bt BT_CLR_ALL    &trans  &trans
             >;
         };
 
