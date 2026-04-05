@@ -7,7 +7,9 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
+    &studio_unlock
     behaviors {
+
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
